@@ -2,10 +2,11 @@ function publishResult2(){
     const prog=document.getElementById("prog2").value;
     const hal=document.getElementById("hal2").value;
     const web=document.getElementById("web2").value;
+    const szb=document.getElementById("szb2").value;
 
-    let total= parseFloat(prog) + parseFloat(hal) + parseFloat(web);
+    let total= parseFloat(prog) + parseFloat(hal) + parseFloat(web) + parseFloat(szb);
     document.getElementById("sum2").innerHTML="Elért pontszám:" + total;
-    let percentage2=(total*100)/120;
+    let percentage2=(total*100)/150;
     document.getElementById("percentage2").innerHTML="Százalék:" + percentage2; 
 
     if (percentage2>=60) {
