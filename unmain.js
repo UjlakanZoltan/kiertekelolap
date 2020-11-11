@@ -3,7 +3,7 @@ function publishResult2(){
     const hal=document.getElementById("hal2").value;
     const web=document.getElementById("web2").value;
 
-    let total= parseFloat(prog2) + parseFloat(hal2) + parseFloat(web2);
+    let total= parseFloat(prog) + parseFloat(hal) + parseFloat(web);
     document.getElementById("sum2").innerHTML="Elért pontszám:" + total;
     let percentage2=(total*100)/120;
     document.getElementById("percentage2").innerHTML="Százalék:" + percentage2; 
