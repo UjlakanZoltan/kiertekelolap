@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Erettsegi</title>
+  </head>
+    <header><h1><b>Érettségi értékelőlap</b></h1></header>
+  <body><br>
+      <h4><u>Érettségi tétel: Merevlemez üzembe helyezése és particionálása</u></h4>
+                  
+                <div id="szoveg">
+                  <p><h5><u>Üzembe helyezés:</u> Manapság a winchesterek kaphatók 500GB-ostól egészen 10TB-os méretűig, 5400 vagy 7200-as percenkénti fordulatszámmal (RPM). A nagyobb fordulatszámú természetesen gyorsabb.  Az üzembe helyezés úgy kezdődik, hogy keresünk neki helyet a házban, becsavarozzuk, és kiválasztjuk melyik csatornára akarjuk dugni. Ez gyakorlatilag azt jelenti, hogy melyik adatkábelt (bus) dugjuk rá. Egy kábelre több eszközt is csatlakoztathatunk, pl. szokásos a winchestert és CD/DVD meghajtót egy kábelre lehet tenni, több merevlemez esetén viszont célszerű külön adatkábelre kötni őket.  Kell még a merevlemezünknek egy áramforrás is, keressünk neki egyet a számítógépházban! (sárga, piros és fekete kábelek egy fekete vagy fehér csatlakozóval) A következő lépés, hogy a Setup-ban, a Hard Disk Type, illetve valamilyen hasonló nevű menüpontban beállítjuk a merevlemezünk jellemzőit. Ha a lemezt a gép felismerte, töltsük be az operációs rendszert és formázzuk meg a lemezt! El kell döntenünk, hogy milyen fájlrendszert akarunk használni! A Windows FAT és NTFS fájlrendszereket támogat, ha nagy winchesterünk van, akkor NTFS-t érdemes választanunk. Ha több winchestert használunk, vagy több helyen használunk egyet, akkor célszerű úgynevezett mobil rack-et szerelni a gépbe, ami egy fiókszerű műanyag eszköz, amibe be kell csavaroznunk a merevlemezt, és ezután könnyen kivehetjük-visszatehetjük. Ugyanezt kínálják az újabban megjelent USB-s eszközök, ezekbe ugyanúgy be kell csavarozni a merevlemezt, és USB portra kell csatlakoztatni. A megoldás hátránya, hogy nagyságrendekkel lassabb, mintha mobile rack-ban használnánk a winchestert és IDE kábelre lenne kötve, előnye, hogy nem kell konfigurálni. (plug and play) Az eSata csatlakozó már régóta nem számít újdonságnak, ugyanis ezzel a port típussal számos alaplap és számos készülék van forgalomban. Az USB és FireWire portoknál nagyobb átviteli sebességet sata1-2-3 kínáló megoldás alapvetően jó ötlet, ám van egy nagy hátránya: az adatátvitelt és a tápellátást az egységek többségénél külön kábelen keresztül tudják csak megoldani, ami miatt nem csak adatátviteli-, de külön tápkábelt is alkalmazni kell, ugyanis az eSata port nem képes az eszközök számára elegendő áramot biztosítani.</h5></p>
+                
+                <p><h5><u>Bios beállítások:</u> A legtöbb BIOS beállító menü lehetővé teszi a rendszert indító eszközök kiválasztását. Ez dönti el, milyen sorrendben keressen indítható operációs rendszereket az eszközökön, sok BIOS esetén olyan nevekkel, mint A: (az 1. floppy lemez), majd az 1. CD-ROM eszköz (ami úgy jelenik meg, mint D: vagy E:), majd C: (az 1. merevlemez). Ez a beállítás teszi lehetővé egy floppy vagy egy CD-ROM indítását, melyek a Debian telepítésének legnépszerűbb eszközei. Újabb SCSI vezérlőre kötött CD-ROM eszköz esetén általában lehet erről indítani. Csak be kell kapcsolni a CD-ROM indítást a vezérlő SCSI-BIOS részén. Egy másik népszerű lehetőség egy USB tároló eszközről indítás (USB kulcs vagy pendrive). Pár BIOS tud közvetlenül egy USB tároló eszközről indítani, egyesek nem. Ha nem látunk pont ilyet, még mindig működhet az „Eltávolítható meghajtó” vagy „USB-ZIP” beállítás USB eszközről indításhoz. A telepítés után érdemes majd úgy beállítani, hogy rögtön a merevlemezről induljon.</h5></p>
+
+                <p><h5><u>Partícionálás:</u> Fontos dolog még a partícionálás, ami a lemez "felszabdalását" jelenti kisebb darabokra, így az egy darab lemezünk több független meghajtónak fog látszani. Pl. van egy 240 GB-os lemezünk, amit felosztunk 2 db 120 GB-osra, így lesz egy C: és egy D: betűjelű 120 GB-os meghajtónk, ami hasznos lehet pl. akkor, ha az egyik vírusos lesz, az adatainkat ilyenkor át tudjuk menteni a másikra. Hasznos még, ha egy gépen több operációs rendszert is akarunk használni, pl. Windows és Linux, stb. Természetesen használhatjuk a meghajtót egy 240 GB-os lemezként is.</h5></p>
+
+                <p><h5><u>Formattálás:</u> Ahhoz, hogy a mágneslemezeken lévő mágneses réteg alkalmas legyen adatok tárolására, létre kell hozni a tároláshoz szükséges rendszert. Ezt formattálásnak nevezzük. Formattáláskor jönnek létre a sávok, szektorok. A formattálást egy bizonyos partícióra hajtjuk végre. Formattáláskor az adott partíción lévő fájlok törlődnek, bár egyes technikákkal visszaállíthatóak. Mbr- Master boot record, mely elindít egy operációs rendszert a merevlemezről; ezt a kis programot betöltő kódnak vagy rendszerindító kódnak (boot code) is nevezik.</h5></p>
+
+                <p><h5><u>Merevlemezek karbantartása:</u> A lemez felületének állapotát ellenőrizhetjük ezzel a szolgáltatással. A meghajtó kiválasztása után dönthetünk, hogy csak a lemez tartalmának ellenőrzését végezzük el, vagy a lemez felületének ellenőrzését is. Hiba esetén megpróbálhatjuk a hibát kijavítani a programmal. Teljes ellenőrzés esetén további beállításokat végezhetünk el. A lemezellenőrzés állapotát itt is egy folyamatjelzővel követhetjük nyomon a lemez állapotáról. A használat során a lemezre sokszor másolunk, sokszor törlünk róla, aminek az az eredménye, hogy az adatok nagyon rendezetlenül lesznek, így a működés lelassul és az olvasófej nagyobb igénybevételnek lesz kitéve. (Gondoljunk arra, hogy a lemez sávokból áll, ha az adat eleje a külső sávon van, a vége valahol belül, akkor az olvasófejet állandóan pozícionálni kell, ami időigényes.)
+                Erre nyújt megoldást, a Windows Lemeztöredezettség-mentesítő programja vagy a Norton Disk Defragmenter. Ezek a programok az adatokat fizikailag is rendszerezik a lemezen, így kisebb-nagyobb teljesítménynövekedés érhető el. (Pl. programok indulása gyorsabb lesz.) A művelet fél órát is igénybe vehet, de 1-2 havonta érdemes elvégezni.</h5></p>
+                </div>
+
+                
+                    
+        <div class="card">
+        <input type="text" id="prog" placeholder="Programozás"><br><br>
+        <input type="text" id=hal placeholder="Hálózati ismeretek"><br><br>
+        <input type="text" id="web" placeholder="Weboldalak kódolása és adatbázis-kezelés"><br><br>
+        
+        <button onclick="publishResult()">Értékelés</button>
+    </div>
+    <div class="result">
+        <span id="sum"></span><br><br>
+        <span id="percentage"></span><br><br>
+        <span id="grade"></span><br><br>
+    </div>                                  
+        
+</body>
+<script src="main.js"></script>
+</html>  
