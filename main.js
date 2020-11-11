@@ -5,7 +5,7 @@ function publishResult(){
 
     let total= parseFloat(prog) + parseFloat(hal) + parseFloat(web);
     document.getElementById("sum").innerHTML="Elért pontszám:" + total;
-    let percentage=(total*100)/300;
+    let percentage=(total*100)/120;
     document.getElementById("percentage").innerHTML="Százalék:" + percentage; 
 
     if (percentage>=80) {

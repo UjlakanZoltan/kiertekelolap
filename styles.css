@@ -106,9 +106,16 @@ body{
     text-align: center;
     font-family: sans-serif;
     background-color: black;
-    text-decoration-color: white;
     color: white;
+    
+    
 }
+
+.dark-mode {
+  background-color: white;
+  color: black;
+}
+
 .card{
     text-align: center;
     height: 50vh;
@@ -141,12 +148,24 @@ button{
     border-radius: 2px;
     border: white;
     box-shadow: 4px 4px 4px #fff,
-                -4px -4px 8px #fff;
+                -4px -4px 4px #fff;
     font-size: 35px;
     height: 45px;
     margin: auto;
 }
 .result{
+    font-size: 25px;
+    color: white;
+    font-weight: 850;
+    margin: auto;
+    height: 175px;
+    margin-top: 35px;
+    width: 450px;
+    border-radius: 25px;
+    background-color: #000;
+}
+
+.result2{
     font-size: 25px;
     color: white;
     font-weight: 850;
@@ -165,6 +184,21 @@ button{
 
 table{
     text-align: center;
+    width: auto;
 }
+
+td{
+    text-align: center;
+}
+
+tr{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+
 
 
